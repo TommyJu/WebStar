@@ -6,8 +6,7 @@ namespace WebStar.Pages
 {
     public class ProcessDetailsModel : PageModel
     {
-        public void OnGet(int id)
-        {
+        public void OnGet(int id) {
             var proc = Process.GetProcessById(id);
             ViewData["MyProcess"] = proc;
         }
