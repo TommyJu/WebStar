@@ -1,0 +1,26 @@
+﻿@page
+@model WebStar.Pages.ChatBotModel
+@{
+    ViewData["Title"] = "Chat with AI";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div>
+        <label for="userInput">Your Message:</label>
+        <textarea id="userInput" name="UserInput" rows="4" cols="50">@Model.UserInput</textarea>
+    </div>
+
+    <div>
+        <button type="submit">Send</button>
+    </div>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.AiResponse))
+{
+    <div>
+        <label for="aiOutput">AI Response:</label>
+        <textarea id="aiOutput" name="aiOutput" rows="10" cols="50" readonly>@Model.AiResponse</textarea>
+    </div>
+}
