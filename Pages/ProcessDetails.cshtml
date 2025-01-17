@@ -1,0 +1,11 @@
+﻿@page
+@using System.Diagnostics
+@model WebStar.Pages.ProcessDetailsModel
+@{
+    var myProc = ViewData["MyProcess"] as Process;
+}
+
+<div>
+    <p>ID: @myProc!.Id</p>
+    <p>Name: @myProc!.ProcessName</p>
+</div>

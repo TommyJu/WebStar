@@ -10,5 +10,6 @@
     @foreach (var proc in procs!)
     {
         <li>@proc.ProcessName</li>
+        <li><a class="nav-link text-dark" asp-page="/ProcessDetails" asp-route-itemid="@proc.Id">@proc.ProcessName</a></li>
     }
 </ul>
